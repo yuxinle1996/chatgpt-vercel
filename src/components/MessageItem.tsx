@@ -130,16 +130,17 @@ export default (props: Props) => {
       </div>
       <div
         class="message prose prose-slate dark:prose-invert dark:text-slate break-words overflow-hidden"
-        innerHTML={md
-          .render(props.message.content)
-          .replace(
-            /Vercel/g,
-            `<a href="http://vercel.com/?utm_source=busiyi&utm_campaign=oss" style="border-bottom:0">${vercel}</a>`
-          )
-          .replace(
-            /OpenAI/g,
-            `<a href="https://www.openai.com" style="border-bottom:0">${openai}</a>`
-          )}
+        innerHTML={
+          md.render(props.message.content)
+          // .replace(
+          //   /Vercel/g,
+          //   `<a href="http://vercel.com/?utm_source=busiyi&utm_campaign=oss" style="border-bottom:0">${vercel}</a>`
+          // )
+          // .replace(
+          //   /OpenAI/g,
+          //   `<a href="https://www.openai.com" style="border-bottom:0">${openai}</a>`
+          // )
+        }
       />
       <MessageAction
         del={del}
